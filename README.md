@@ -3,11 +3,11 @@ Projeto de Inovação do primeiro semestre na SpTech no curso de ADS.
 
 ## 📝 Índice
 
-1. [Descrição do Projeto](#descrição-do-projeto-de-monitoramento-de-ambientes-hospitalares)
-2. [Funcionalidades](#funcionalidades-do-projeto)
-3. [Entregáveis](#entregáveis)
-4. [Tecnologias Utilizadas](#tecnologias-utilizadas)
-5. [Contribuições](#contribuições)
+1. Descrição do Projeto
+2. Funcionalidades
+3. Entregáveis
+4. Tecnologias Utilizadas
+5. Contribuições
 
 ## 📁 Descrição do Projeto de Monitoramento de ambientes hospitarales  
 
