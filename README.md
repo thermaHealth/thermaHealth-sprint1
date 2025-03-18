@@ -15,13 +15,11 @@ O thermaHealth está sendo desenvolvido no primeiro semestre do curso de Anális
 
 ---
  
-## 🔧 Funcionalidades do Projeto
-
-O sistema desenvolvido permite:
-- **Coleta de dados** de temperatura e umidade em tempo real;
-- **Armazenamento e análise** dos dados coletados;
-- **Exposição dos dados** via dashboard em um site institucional;
-- **Alertas** em caso de variações fora dos parâmetros estabelecidos em cada sala;
+## 🔧 Características do Sistema
+- **Captura em tempo real** das informações de temperatura e umidade;
+- **Armazenamento e processamento** das informações coletadas;
+- **Visualização dos dados** por meio de um dashboard em um site institucional;
+- **Notificações** quando ocorrerem alterações além dos limites pré-estabelecidos para cada sala;
 
 ## 📦 Entregáveis
 Lista de entregáveis e objetivos cumpridos durante o desenvolvimento do projeto.
