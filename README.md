@@ -1,5 +1,5 @@
 # 🏥 thermaHealth-sprint1
-Projeto de Inovação do primeiro semestre na SpTech no curso de ADS.
+Projeto de Pesquisa e Inovação do primeiro semestre na SpTech School no curso de Análise e Desenvolvimento de Sistemas.
 
 ## 📝 Índice
 
@@ -9,9 +9,9 @@ Projeto de Inovação do primeiro semestre na SpTech no curso de ADS.
 4. Tecnologias Utilizadas
 5. Contribuições
 
-## 📁 Descrição do Projeto de Monitoramento de ambientes hospitarales  
+## 📁 Descrição do Projeto de Monitoramento de sistemas de climatização em ambientes hospitarales  
 
-O thermaHealth está sendo desenvolvido no primeiro semestre do curso de Análise e Desenvolvimento de Sistemas da SPTech com o objetivo de ajudar no monitoramento de ambientes hospitalares. O projeto utiliza sensores de temperatura LM35 e sensores de temperatura e umidade DHT11 para monitorar as condições de salas específicas dentro de hospitais.
+O thermaHealth está sendo desenvolvido no primeiro semestre do curso de Análise e Desenvolvimento de Sistemas da SPTech School com o objetivo de aprimorar o monitoramento de sistemas de climatização em ambientes hospitalares. O projeto utiliza sensores de temperatura LM35 e sensores de temperatura e umidade DHT11 para monitorar as condições de salas específicas dentro de hospitais.
 
 ---
  
