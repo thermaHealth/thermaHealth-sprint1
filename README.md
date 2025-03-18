@@ -15,7 +15,7 @@ O thermaHealth está sendo desenvolvido no primeiro semestre do curso de Anális
 
 ---
  
-## 🔧 Características do Sistema
+## 🔧 Características do Projeto
 - **Captura em tempo real** das informações de temperatura e umidade;
 - **Armazenamento e processamento** das informações coletadas;
 - **Visualização dos dados** por meio de um dashboard em um site institucional;
