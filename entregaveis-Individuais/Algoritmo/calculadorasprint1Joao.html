@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+
+    Coloque qual o custo do consumo de energia do hospital: <Input id="input_energia"></Input> <br>
+    Coloque qual a temperatura que seu ar-condicionado fica ligado: <input id="input_temperatura"></input> <br>
+    Coloque a quantos meses foi feita a ultima manutenção do ar-condicionado: <input type="text" id="input_manutencao"> <br>
+    <button onclick="calcular()">Calcular energia</button>
+    
+    <div id="div_mensagem"></div>
+
+     <!-- 50% da energia gasta de um hospital é consumida por ar condicionado
+        para otimizar o ar precisa trabalhar entre 22 e 24 graus
+        a cada grau que se reduz no controle remoto do equipamento, são cerca de 3,5% de aumento no consumo de energia.
+        A multa em caso de falta de manutenção pode chegar a R$ 200 mil.    
+        -->
+    
+        
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var energia = Number (input_energia.value);
+        var temperatura = Number (input_temperatura.value);
+        var manutencao = Number (input_manutencao.value);
+        var multa = Number (200000);
+        var aumento = Number (0.035);
+        var temperatura_ideal = Number (24);
+        var consumo_total = energia / 2;
+        var total = consumo_total;
+
+       if (temperatura < temperatura_ideal){
+            // Aumento do consumo caso a temperatura seja abaixo de 24°C
+            var diferenca = temperatura_ideal - temperatura;
+            var calculo = (1 + aumento) ** diferenca;
+            var custo_final = consumo_total *= calculo;
+       }
+        if (temperatura > temperatura_ideal) {
+            // Aumento do consumo caso a temperatura seja acima de 24°C
+            var diferenca = temperatura - temperatura_ideal;
+             var calculo = (1 + aumento) ** diferenca;
+             var custo_final = consumo_total *= calculo;    
+        }
+
+       if(manutencao > 6){
+            div_mensagem.innerHTML = `Está correndo o risco de ser autoado no valor de até ${multa} Reais!
+             Faça a manutenção o mais rápido possível dos seus ar condicionados. <br> <br>`
+       }
+
+            div_mensagem.innerHTML += `O custo da sua energia referente ao ar condicionado é de ${custo_final} Reais! <br>
+            Caso mantenha a temperatura ideal de ${temperatura_ideal} Graus, poderá ter uma economia de ${custo_final - total} Reais!`
+                                      
+
+    }
+
+
+
+
+</script>
