@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gastos em hospitais</title>
+</head>
+<body>
+    Insira o valor gasto com manutenção dos aparelhos <br>
+    <input type="text" id="input_manutencao"> <br><br>
+    Insira o valor gasto com manutenção de ar-condicionado <br>
+    <input type="text" id="input_ar"> <br><br>
+    Insira o gasto com problemas de umidade <br>
+    <input type="text" id="input_umidade"> <br><br>
+    <button onclick="calcular()">Calcular gasto</button>
+    
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var manutencao = Number(input_manutencao.value)
+        var ar = Number(input_ar.value)
+        var umidade = Number(input_umidade.value)
+        var total = manutencao + ar + umidade
+
+        div_mensagem.innerHTML = `<b style="color:red">O hospital tem um gasto total de R$${total}.<br>
+            Com o nosso projeto de coleta de dados, ao colocar em prática, o custo com gastos tende a diminuir</b>`
+    }
+</script>
