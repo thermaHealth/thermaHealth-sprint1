@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora da economia</h1>
+    <br><br>
+    <B style="color: red;">Voce sabia que seu custo com climatização para as áreas do seu hospital todos os meses chega a 50% de toda a sua conta de energia? 
+        <br><br> E ser ainda maior caso as peças do seu ar-condicionado estejam se deteriorando mais rapido por conta da umidade em excesso?
+    </B><br>
+    <br>
+    <B style="color: red;">Voce sabia que seu custo com multas referentes a não manter a temperatura do seu hospital adequada pode chegar a 1 milhão de reais?</B>
+    <br><br>
+    <B style="color: green;">Nossos sensores ajudarão o seu negócio a economizar dinheiro e ficar dentro das normas da ABNT
+
+    </B>
+<br> <br>
+    Informe o valor da sua conta de luz
+    <br>
+    <input type="text" id="input_valor">
+    <br>
+    Informe o valor referente a manutenção dos ambientes:
+    <br>
+    <input type="text" id="input_ar">
+    <br>
+    Informe o valor pago em multas no ultimo ano:
+    <br>
+    <input type="text" id="input_multa">
+    <br>
+    <button onclick="calcular()">Calcular Economia</button>
+    <br>
+    <div id="div_mensagem"></div>
+    
+
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var energia = Number(input_valor.value)
+        var manuntencao = Number(input_ar.value)
+        var multa = Number(input_multa.value)
+        if (multa == 0){
+            div_mensagem.innerHTML = `<b style="color : blue">De acordo com o seu custo de conta de luz e seu custo com manutenção, usando nossos sensores , <br>
+        podemos te ajudar a diminuir cerca 20% o total de R$${energia + manuntencao}.`
+        } else {
+        div_mensagem.innerHTML = `<b style="color : blue">De acordo com o seu custo de conta de luz e seu custo com manutenção, usando nossos sensores , <br>
+        podemos te ajudar a diminuir cerca 20% o total de R$${energia + manuntencao}.
+        <br><br>
+        Em relação a multa de R$${multa}, conseguimos informar com precisão a temperatura e umidade de todo o seu hospital,
+        <br> para que voce possa sempre deixar a temperatura correta e zere esse custo!</b>`
+
+        }
+    }
+</script>
