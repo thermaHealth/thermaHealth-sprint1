@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora da economia</h1>
+   
+    Informe o valor gasto com problemas de bolor e fungos(apenas números):
+    <br>
+    <input type="text" id="input_umidade">
+    <br>
+    Informe o valor referente a manutenção dos aparelhos de ar-condicionado(apenas números):
+    <br>
+    <input type="text" id="input_ar">
+    <br>
+    Informe o valor pago em manutenção de aparelhos hospitalares(apenas números):
+    <br>
+    <input type="text" id="input_aparelhos">
+    <br>
+    <button onclick="calcular()">Calcular Economia</button>
+    <br>
+    <div id="div_mensagem"></div>
+    
+
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var umidade = Number(input_umidade.value)
+        var manuntencaoAr = Number(input_ar.value)
+        var manutencaoApHosp = Number(input_aparelhos.value)
+
+        var custoUm = umidade + manuntencaoAr
+        var custoDois = manuntencaoAr + manutencaoApHosp
+
+
+        div_mensagem.innerHTML = `<b style="color : blue">No hospital os valores com manutenção dos aparelhos
+            de ar-condicionado e problemas de bolores e fungos, chegou a R$${custoUm}.
+            Além disso, seus custos com manutenção dos aparelhos hospitalares é de R$${manutencaoApHosp}.</b>
+            
+            <br>
+            <b style="color: red">Marque uma conversa com nossos consultores e eles ajudarão a ver se existe uma
+            relação entre seu custo com problemas de umidade (R$${umidade}) e seus gastos com a manutenção dos
+            aparelhos do hospital (R$${custoDois})</b>`
+            
+
+    }
+</script>
