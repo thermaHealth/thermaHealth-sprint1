@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    <h2><i>Calculadora Financeira de Gastos</i></h2>
+    <p> Sistemas de climatização são necessários para garantir a qualidade do ar nos hospitais, <br> 
+        sem a manutenção correta podem aumentar os gastos com energia em cerca de 20%.
+    </p>
+    
+    <img src="https://cdn-icons-png.flaticon.com/512/2942/2942269.png" alt="Imagem calculadora">
+
+    <h4>Calcule abaixo as despesas em manutenção de aparelhos e energia elétrica do hospital:</h4>
+
+    Gasto mensal com energia elétrica: R$
+    <input type="number" id="energia_eletrica">
+    <br><br>
+
+    Gasto mensal com manutenção de aparelhos: R$
+    <input type="number" id="gastos_manutencao_aparelhos">
+    <br><br>
+
+    <button onclick="calcularGastos()">Calcular Despesas</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+
+     function calcularGastos() {
+        var gastosEnergiaEletrica = Number(energia_eletrica.value);
+        var gastosManutencaoAparelhos = Number(gastos_manutencao_aparelhos.value);
+
+        var totalGastos = gastosEnergiaEletrica + gastosManutencaoAparelhos;
+
+        div_mensagem.innerHTML = `Ao contabilizar os gastos de energia elétrica e manutenção de aparelhos o total de gastos <br>
+        é de cerca de R$${totalGastos} por mês.`;
+    }
+
+</script>
