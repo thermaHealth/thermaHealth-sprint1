@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+<body style="background-color:#f7f7f7">
+    <h1>Calculadora Financeira</h1>
+    <p>Descubra quanto seu hospital pode economizar ao otimizar o uso do ar-condicionado e eliminar as multas.</p>
+    <img src="https://ouch-cdn2.icons8.com/UpW8YDhajbRn4loOqzZsknv32D1t47xKQCw08MSnQe8/rs:fit:456:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNTIx/Lzg3NTFmNjRlLTQ0/OWYtNDJjMS04MWVl/LWRjODVmZTUzNzU0/YS5zdmc.png" alt="Imagem">
+    <br>
+    <div style="background-color:#86c7ed">
+        <h2>Cáculo de Consumo</h3>
+        <p>Custo mensal com energia elétrica (R$):</p>
+        <input type="text" id="input_energia">
+        <br>
+        <p>Custo mensal com manutenção (R$):</p>
+        <input type="text" id="input_manutencao">
+        <br>
+        <p>Custo mensal com perda de equipamento (R$):</p>
+        <input type="text" id="input_equipamentos">
+        <br>
+        <p>Percentual de economia de energia (%) - Até 20%:</p>
+        <input type="number" id="input_economia"  min="1" max="20">
+        <br>
+        <br>
+        <button style="background-color: #1836b2; color: white;" onclick="calcular()">Calcular Economia</button>
+    </div>
+    <br>
+    <div style="background-color:#86c7ed">
+        <h2>Resultado:</h2>
+        <div id="div_resultado"></div>
+    </div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var energia = Number(input_energia.value);
+        var manutencao = Number(input_manutencao.value);
+        var equipamento = Number(input_equipamentos.value);
+        var percentualEconomia = Number(input_economia.value);
+        var custoTotal = energia + manutencao + equipamento;
+        var economia = (custoTotal * percentualEconomia) / 100;
+
+        div_resultado.innerHTML = `Seu gasto atual de energia é de <b style="color: red;">R$${custoTotal}</b>.
+        <br><br>
+        <p>Com nossos serviços de sensores, você pode reduzir esse valor em até 20%: Seu cálculo foi para ver a redução em ${percentualEconomia}% resultando em R$${economia}</p>
+        `;
+    }
+</script>
